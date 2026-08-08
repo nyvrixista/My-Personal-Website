@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #111111;
     color: #EEEEEE;
@@ -23,16 +27,19 @@ nav a {
     color: #EEEEEE;
     text-decoration: none;
     margin: 0 10px;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
+    color: #FFFFFF;
     text-decoration: underline;
 }
 
 section {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
-    padding: 80px 20px;
+    padding: 90px 20px;
+    scroll-margin-top: 80px;
 }
 
 h2 {
@@ -64,7 +71,7 @@ a {
     margin: 20px 0;
     border: 1px solid #333333;
     border-radius: 12px;
-    transition: transform 0.2 ease;
+    transition: transform 0.2s ease;
     overflow: hidden;
     padding: 0;
     flex: 1;
@@ -80,12 +87,12 @@ a {
 }
 
 .project a {
-    text-decoration: none;
     display: inline-block;
     margin-top: 10px;
     padding: 10px 16px;
     border: 1px solid #EEEEEE;
     border-radius: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .project a:hover {
@@ -182,6 +189,20 @@ footer p {
     margin-top: 15px;
 }
 
+.current-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #333333;
+}
+
+.current-item h3 {
+    margin-bottom: 5px;
+}
+
+.current-item p {
+    margin: 0;
+    color: #AAAAAA;
+}
+
 @media (max-width: 700px) {
     #home {
         flex-direction: column;
@@ -201,6 +222,13 @@ footer p {
     .contact-links {
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
     }
 
     nav a {
