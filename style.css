@@ -64,6 +64,8 @@ a {
     border: 1px solid #333333;
     border-radius: 12px;
     transition: transform 0.2 ease;
+    overflow: hidden;
+    padding: 0;
 }
 
 .project:hover {
@@ -150,6 +152,17 @@ footer p {
 .contact-links a:hover {
     background-color: #EEEEEE;
     color: #111111;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #333333;
+}
+
+.project-content {
+    padding: 25px;
 }
 
 @media (max-width: 700px) {
