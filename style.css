@@ -1,19 +1,22 @@
 body {
     background-color: #111111;
     color: #EEEEEE;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
 }
 
 header {
     background-color: #181818;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-bottom: 1px solid #333333;
 }
 
 header h1 {
-    margin: 0 0 15px 0;
+    font-size: 22px;
+    margin: 0;
 }
 
 nav a {
@@ -46,17 +49,9 @@ a {
     color: #FFFFFF;
 }
 
-.intro {
-    max-width: 600px;
-}
-
-.intro h2 {
-    font-size: 50px;
-}
-
 .profile img {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #EEEEEE;
@@ -68,6 +63,11 @@ a {
     margin: 20px 0;
     border: 1px solid #333333;
     border-radius: 12px;
+    transition: transform 0.2 ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
 }
 
 .project h3 {
@@ -76,8 +76,110 @@ a {
 
 .project a {
     text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
 }
 
 .project a:hover {
-    text-decoration: underline;
+    background-color: #EEEEEE;
+    color: #111111;
+    text-decoration: none;
+}
+
+#home {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.intro {
+    flex: 1;
+}
+
+.intro h2 {
+    font-size: 58px;
+    margin: 0;
+}
+
+.profile {
+    flex: 1;
+    text-align: center;
+}
+
+.about-item {
+    border-left: 3px solid #EEEEEE;
+    padding-left: 20px;
+    margin: 30px 0;
+}
+
+.profile h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #181818;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #333333;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.contact-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.contact-links a {
+    padding: 10px 18px;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    background-color: #EEEEEE;
+    color: #111111;
+}
+
+@media (max-width: 700px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .intro h2 {
+        font-size: 45px;
+    }
+
+    .profile img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .contact-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 0 5px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
 }
