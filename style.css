@@ -55,6 +55,7 @@ a {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #EEEEEE;
+    padding: 6px;
 }
 
 .project {
@@ -66,6 +67,8 @@ a {
     transition: transform 0.2 ease;
     overflow: hidden;
     padding: 0;
+    flex: 1;
+    text-align: center;
 }
 
 .project:hover {
@@ -106,6 +109,7 @@ a {
 .intro h2 {
     font-size: 58px;
     margin: 0;
+    line-height: 1.1;
 }
 
 .profile {
@@ -163,6 +167,19 @@ footer p {
 
 .project-content {
     padding: 25px;
+}
+
+.hero-text {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 500px;
+    color: #AAAAAA;
+}
+
+.profile-label {
+    font-size: 14px;
+    color: #AAAAAA;
+    margin-top: 15px;
 }
 
 @media (max-width: 700px) {
